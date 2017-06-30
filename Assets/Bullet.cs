@@ -33,6 +33,8 @@ public class Bullet : MonoBehaviour {
 		else if(col.name == "Player(Clone)" && !playerBullet)
 		{
 			GameController.gameController.GameOver();
+			Destroy(col.gameObject);
+			Destroy(this.gameObject);
 		}
 	}
 }
